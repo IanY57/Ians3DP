@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 import {
   setColor,
@@ -6,11 +6,12 @@ import {
   setLetterSpacing,
   setFont,
   setBorder,
-  setTransition
-} from "../../styles";
+  setTransition,
+} from "../../styledComponents/styles"
 
 export const PrimaryBtn = styled.button`
   display: inline-block;
+
   background: ${setColor.primaryColor};
   color: ${setColor.mainWhite};
   text-transform: capitalize;
@@ -22,15 +23,15 @@ export const PrimaryBtn = styled.button`
   ${setTransition()}
   &:hover {
     background: transparent;
-    color: ${setColor.primaryColor};
+    color: ${setColor.mainWhite};
   }
   ${props =>
     `margin: ${props.Top || 0} ${props.Right || 0} ${props.Bottom ||
       0} ${props.Left || 0}}`};
   text-decoration: none;
   cursor: pointer;
-`;
+`
 
 export const SmallBtn = styled(PrimaryBtn)`
   padding: ${setRem(9)} ${setRem(12)};
-`;
+`

@@ -1,14 +1,14 @@
-import React from "react";
+import React from "react"
 
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components"
 
 import {
   setColor,
   setRem,
   setLetterSpacing,
   setBorder,
-  media
-} from "../../styles";
+  media,
+} from "../../styledComponents/styles"
 
 const fadeIn = (start, mid, end) => {
   const animation = keyframes`
@@ -24,11 +24,11 @@ const fadeIn = (start, mid, end) => {
   opacity: 1;
   transform: translateY(${end})
 }
-`;
+`
   return css`
     animation: ${animation} 3s ease-in-out;
-  `;
-};
+  `
+}
 
 const Banner = ({ className, title, text, children, greeting }) => {
   return (
@@ -41,8 +41,8 @@ const Banner = ({ className, title, text, children, greeting }) => {
         {children}
       </div>
     </div>
-  );
-};
+  )
+}
 
 const BannerWrapper = styled(Banner)`
   background: rgba(0, 0, 0, 0.7);
@@ -78,6 +78,6 @@ const BannerWrapper = styled(Banner)`
   .info {
     ${fadeIn("-100%", "10%", "0")} /*animation  */
   }
-`;
+`
 
-export default BannerWrapper;
+export default BannerWrapper
