@@ -1,13 +1,13 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 // font-family: 'Quicksand', sans-serif;
 // font-family: 'Satisfy', cursive;
 
-import { setColor, setFont } from "../../styles";
+import { setColor, setFont } from "../styledComponents/styles"
 
-const Globals = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Merriweather:400,700&display=swap');
 
 *{
   margin: 0;
@@ -18,7 +18,7 @@ const Globals = createGlobalStyle`
 body {
   font-size: 100%;
   color:${setColor.mainBlack};
-  background: ${setColor.mainWhite}; 
+  background: ${setColor.backgroundColor}; 
   ${setFont.mainFont}
 }
 
@@ -66,6 +66,6 @@ p{
   margin: 0 0 1.5rem 0;
 }
 
-`;
+`
 
-export default Globals;
+export default GlobalStyles

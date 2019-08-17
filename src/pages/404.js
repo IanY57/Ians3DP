@@ -1,7 +1,9 @@
 import React from "react"
 
+import Layout from "../components/globals/Layout"
+
 const errorPage = () => {
-  return <div>Its all gone wrong</div>
+  return <Layout>Its all gone wrong</Layout>
 }
 
 export default errorPage
