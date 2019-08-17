@@ -5,7 +5,7 @@ import Layout from "../components/globals/Layout"
 
 export default () => (
   <Layout>
-    Hello world!
+    <h1>this is a heading</h1>
     <Link to="/products/">Products</Link>
   </Layout>
 )

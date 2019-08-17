@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components"
 // font-family: 'Quicksand', sans-serif;
 // font-family: 'Satisfy', cursive;
 
-import { setColor, setFont } from "../styledComponents/styles"
+import { setColor, setFont, setLetterSpacing } from "../styledComponents/styles"
 
 const GlobalStyles = createGlobalStyle`
 
@@ -18,54 +18,29 @@ const GlobalStyles = createGlobalStyle`
 body {
   font-size: 100%;
   color:${setColor.mainBlack};
-  background: ${setColor.backgroundColor}; 
-  ${setFont.mainFont}
+  background: ${setColor.lightGrey}; 
+  ${setFont.mainFont};
+  line-height: 1.4;
+  font-size: 1rem;
 }
 
-h1{
-  font-size:3em;
-  line-height:1.2;
-  margin-bottom: 0.65em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: ${setFont.headingFont};
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  ${setLetterSpacing(3)}
 }
-
-h2{
-  font-size:2.5em;
-  line-height:1.2;
-  margin-bottom: 0.65em;
+p {
+  margin-bottom: 1.25rem;
 }
-
-h3{
-  font-size:2em;
-  line-height:1;
-  margin-bottom: 0.65em;
+a {
+  text-decoration: none;
 }
-
-h4{
-  font-size:1.5em;
-  font-weight: bold;
-  line-height:0.8;
-  margin-bottom: 0.65em;
-}
-
-h5{
-  font-size:1em;
-  font-weight: bold;
-  line-height:0.8;
-  margin-bottom: 0.65em;
-}
-
-h6{
-  font-size:0.8em;
-  font-weight: bold;
-  line-height:0.8;
-  margin-bottom: 0.65em;
-}
-
-p{
-  line-height: 1.5rem;
-  margin: 0 0 1.5rem 0;
-}
-
 `
 
 export default GlobalStyles
