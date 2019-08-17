@@ -61,7 +61,8 @@ const Navbar = ({ className }) => {
 }
 
 export default styled(Navbar)`
-background: ${setColor.mainWhite};
+  background: ${setColor.mainWhite};
+
   .logo-btn {
     background: transparent;
     border: none;
@@ -69,7 +70,7 @@ background: ${setColor.mainWhite};
   }
 
   .logo-icon {
-    color: ${setColor.primaryColor};
+    color: ${setColor.mainBlack};
     font-size: 1.5rem;
   }
 
@@ -87,7 +88,7 @@ background: ${setColor.mainWhite};
     display: block;
     padding: 1rem 1.25rem;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: ${setColor.mainBlack};
     ${setTransition()};
     font-weight: bold;
@@ -126,13 +127,13 @@ background: ${setColor.mainWhite};
       line-height: 0;
     }
     .nav-social-links a {
-      color: ${setColor.primaryColor};
+      color: ${setColor.mainBlack};
       margin: 0 0.5rem;
       font-size: 1.2rem;
       ${setTransition()};
     }
     .nav-social-links a:hover {
-      color: ${setColor.mainBlack}
+      color: ${setColor.primaryColor};
       transform: translateY(-5px);
     }
   }
